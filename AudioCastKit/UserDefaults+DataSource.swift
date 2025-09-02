@@ -10,7 +10,7 @@ import Foundation
 extension UserDefaults {
     
     /// - Tag: app_group
-    private static let AppGroup = "group.com.dengli.AudioCast.AudioCast"
+    private static let AppGroup = "group.cn.renyuzhuo.AudioCast.AudioCast"
     
     enum Keys: String {
         case historyStorageKey
