@@ -26,10 +26,17 @@ extension LibraryItemContainer: MediaItemConvertible {
 extension PodcastEpisode: MediaItemConvertible {
     
     var mediaItem: INMediaItem {
-        return INMediaItem(identifier: itemID.uuidString,
-                           title: title,
-                           type: .podcastEpisode,
-                           artwork: nil)
+        if #available(iOS 13.0, *) {
+            return INMediaItem(identifier: itemID.uuidString,
+                               title: title,
+                               type: .music,
+                               artwork: nil)
+        } else {
+            return INMediaItem(identifier: itemID.uuidString,
+                               title: title,
+                               type: .song,
+                               artwork: nil)
+        }
     }
 }
 

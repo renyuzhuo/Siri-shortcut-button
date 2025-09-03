@@ -23,19 +23,36 @@
 	<key>INIntentsSupported</key>
 	<array>
 		<string>INPlayMediaIntent</string>
+		<string>INAddMediaIntent</string>
 	</array>
 	<key>INSupportedMediaCategories</key>
 	<array>
+		<string>INMediaCategoryMusic</string>
 		<string>INMediaCategoryVideo</string>
 		<string>INMediaCategoryGeneral</string>
+		<string>INMediaCategoryAudiobooks</string>
+		<string>INMediaCategoryPodcasts</string>
+		<string>INMediaCategoryRadio</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSUserActivityTypes</key>
-	<string>INPlayMediaIntent</string>
+	<array>
+		<string>INPlayMediaIntent</string>
+	</array>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>
+		<string>bluetooth-peripheral</string>
+		<string>processing</string>
+		<string>fetch</string>
+		<string>location</string>
+		<string>push-to-talk</string>
+		<string>remote-notification</string>
+		<string>external-accessory</string>
+		<string>bluetooth-central</string>
+		<string>nearby-interaction</string>
+		<string>voip</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

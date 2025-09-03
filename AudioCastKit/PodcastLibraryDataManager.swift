@@ -105,7 +105,7 @@ extension PodcastLibraryDataManager {
                 for _ in 1...count {
                     let showNumber = showIDManager.nextID(for: show)
                     let newEpisode = PodcastEpisode(itemID: LibraryItemID(),
-                                                    title: "Episode \(showNumber) (\(show.title))",
+                                                    title: "\(show.title)",
                                                     containerMembership: containers)
                     newEpisodes.append(newEpisode)
                 }

@@ -7,6 +7,8 @@ A `UIViewController` that displays the podcast library's episode containers, whi
 
 import UIKit
 import AudioCastKit
+import AVFoundation
+import Intents
 
 class PodcastLibraryTableViewCell: UITableViewCell {
     
@@ -23,6 +25,8 @@ class PodcastLibraryTableViewCell: UITableViewCell {
 }
 
 class PodcastLibraryTableViewController: UITableViewController {
+    
+    var audioPlayer: AVAudioPlayer?
     
     private enum SegueIdentifiers: String {
         case episodeSegue
@@ -42,8 +46,53 @@ class PodcastLibraryTableViewController: UITableViewController {
             self?.tableView.reloadData()
         }
         
+        setupAudioPlayer()
+        
         return libraryManager
     }()
+    
+    func setupAudioPlayer() {
+        // 获取音频文件路径
+        guard let path = Bundle.main.path(forResource: "good", ofType: "mp3") else {
+            print("音频文件未找到")
+            return
+        }
+        let url = URL(fileURLWithPath: path)
+
+        do {
+            // 初始化 AVAudioPlayer
+//            audioPlayer = try AVAudioPlayer(contentsOf: url)
+//            audioPlayer?.prepareToPlay() // 预加载音频缓冲区
+            //audioPlayer?.play() // 播放音频
+        } catch {
+            print("AVAudioPlayer 初始化失败: \(error.localizedDescription)")
+        }
+//        
+        donatePlayIntent(id: "bundle://good.mp3", title: "我的中国心", artist: "Local Artist")
+
+    }
+    
+    // 4) 「捐赠」Play Media（用于系统推荐）
+        private func donatePlayIntent(id: String, title: String, artist: String?) {
+            if #available(iOS 13.0, *) {
+                let item = INMediaItem(identifier: id, title: title,  type: .song, artwork: nil, artist: artist )
+                let intent = INPlayMediaIntent(
+                    mediaItems: [item],
+                    mediaContainer: nil,
+                    playShuffled: nil,
+                    //playbackQueueLocation: .nowPlaying,
+                    playbackSpeed: nil,
+                    //resumePlayback: NSNumber(false),
+                    mediaSearch: nil
+                )
+                let interaction = INInteraction(intent: intent, response: nil)
+                interaction.donate {
+                    if let e = $0 { print("Donate failed:", e) }
+                }
+            } else {
+                // Fallback on earlier versions
+            }
+        }
     
     @IBAction private func refreshFeed(_ sender: Any) {
         libraryManager.addNewEpisodes(count: 3)

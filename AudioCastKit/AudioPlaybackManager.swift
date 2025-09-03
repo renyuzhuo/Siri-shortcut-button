@@ -30,7 +30,7 @@ public class AudioPlaybackManager: NSObject {
     
     private var libraryManager = PodcastLibraryDataManager.shared
     
-    private static var audioFile = Bundle(for: AudioPlaybackManager.self).url(forResource: "Synth", withExtension: "aif")!
+    private static var audioFile = Bundle(for: AudioPlaybackManager.self).url(forResource: "good", withExtension: "mp3")!
     private static var audioFileDuration: TimeInterval {
         let audioAsset = AVURLAsset(url: audioFile)
         return audioAsset.duration.seconds

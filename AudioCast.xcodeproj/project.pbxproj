@@ -32,6 +32,12 @@
 		603626C9207322C700370202 /* AudioCastIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 603626C2207322C700370202 /* AudioCastIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		60465274208E57AF00C9A536 /* LibraryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60465273208E57AF00C9A536 /* LibraryItem.swift */; };
 		60DB601B208EF55F0012F78D /* PlayRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB601A208EF55F0012F78D /* PlayRequest.swift */; };
+		B59FC69B2E682D1300AC5953 /* good.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B59FC69A2E682D1300AC5953 /* good.mp3 */; };
+		B59FC69C2E682D1300AC5953 /* good.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B59FC69A2E682D1300AC5953 /* good.mp3 */; };
+		B59FC69D2E682D1300AC5953 /* good.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B59FC69A2E682D1300AC5953 /* good.mp3 */; };
+		B59FC6A22E68396500AC5953 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B59FC6A12E68396500AC5953 /* Intents.intentdefinition */; };
+		B59FC6A32E68396500AC5953 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B59FC6A12E68396500AC5953 /* Intents.intentdefinition */; };
+		B59FC6A42E68396500AC5953 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B59FC6A12E68396500AC5953 /* Intents.intentdefinition */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +122,8 @@
 		603626CE2073241600370202 /* PlayMediaIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMediaIntentHandler.swift; sourceTree = "<group>"; };
 		60465273208E57AF00C9A536 /* LibraryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryItem.swift; sourceTree = "<group>"; };
 		60DB601A208EF55F0012F78D /* PlayRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRequest.swift; sourceTree = "<group>"; };
+		B59FC69A2E682D1300AC5953 /* good.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = good.mp3; sourceTree = "<group>"; };
+		B59FC6A12E68396500AC5953 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +201,7 @@
 				6003EDF92085803D006AE08A /* Info.plist */,
 				29964896208C1249000BC081 /* StarterData.plist */,
 				6003EDF82085803D006AE08A /* AudioCastKit.h */,
+				B59FC69A2E682D1300AC5953 /* good.mp3 */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -200,6 +209,7 @@
 		6036269E207322A500370202 = {
 			isa = PBXGroup;
 			children = (
+				B59FC6A12E68396500AC5953 /* Intents.intentdefinition */,
 				29E15BDD20C09835008EE6CA /* README.md */,
 				603626A9207322A500370202 /* AudioCast */,
 				6003EDF72085803D006AE08A /* AudioCastKit */,
@@ -383,6 +393,7 @@
 			files = (
 				29964897208C1249000BC081 /* StarterData.plist in Resources */,
 				602EDF6121E6C1AE001A251F /* Synth.aif in Resources */,
+				B59FC69D2E682D1300AC5953 /* good.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +404,7 @@
 				603626B7207322A500370202 /* LaunchScreen.storyboard in Resources */,
 				603626B4207322A500370202 /* Assets.xcassets in Resources */,
 				603626B2207322A500370202 /* Main.storyboard in Resources */,
+				B59FC69C2E682D1300AC5953 /* good.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +412,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B59FC69B2E682D1300AC5953 /* good.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +426,7 @@
 				29786A7C209409CA0079F32F /* DataManager.swift in Sources */,
 				299648AE208D2C89000BC081 /* DataTypes+Intents.swift in Sources */,
 				60465274208E57AF00C9A536 /* LibraryItem.swift in Sources */,
+				B59FC6A42E68396500AC5953 /* Intents.intentdefinition in Sources */,
 				299648A9208D2C89000BC081 /* PodcastLibraryDataManager.swift in Sources */,
 				29E15BDF20C0AC62008EE6CA /* PodcastLibraryDataManager+Intents.swift in Sources */,
 				299648AB208D2C89000BC081 /* UserDefaults+DataSource.swift in Sources */,
@@ -429,6 +443,7 @@
 			files = (
 				29DD87A1208BFF2A00910CD0 /* PodcastLibraryTableViewController.swift in Sources */,
 				29DD87A3208C00E600910CD0 /* EpisodeTableViewController.swift in Sources */,
+				B59FC6A22E68396500AC5953 /* Intents.intentdefinition in Sources */,
 				603626AB207322A500370202 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B59FC6A32E68396500AC5953 /* Intents.intentdefinition in Sources */,
 				603626C5207322C700370202 /* IntentHandler.swift in Sources */,
 				291EF62620BD9DDF00531B69 /* PlayMediaIntentHandler.swift in Sources */,
 			);

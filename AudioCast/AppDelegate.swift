@@ -8,6 +8,7 @@ The application delegate, which handles content playback through continuing user
 import UIKit
 import Intents
 import AudioCastKit
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder {
